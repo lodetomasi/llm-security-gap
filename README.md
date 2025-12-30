@@ -175,19 +175,7 @@ print(f'Spearman rho: {df.comprehension.corr(df.resistance, method=\"spearman\")
 - **Responsible disclosure**: No novel attack techniques; all strategies from literature
 - **Model access**: Used via official APIs under standard terms of service
 
-## Citation
 
-```bibtex
-@inproceedings{anonymous2026gap,
-  title={Characterizing the Gap Between Vulnerability Comprehension 
-         and Secure Code Generation in LLMs},
-  author={Anonymous},
-  booktitle={Proceedings of the 30th International Conference on 
-             Evaluation and Assessment in Software Engineering (EASE)},
-  year={2026},
-  address={Glasgow, Scotland, United Kingdom}
-}
-```
 
 ## License
 
