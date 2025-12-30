@@ -2,7 +2,6 @@
 
 ## Characterizing the Gap Between Vulnerability Comprehension and Secure Code Generation in LLMs
 
-**Venue**: EASE 2026 - The 30th International Conference on Evaluation and Assessment in Software Engineering
 
 ---
 
