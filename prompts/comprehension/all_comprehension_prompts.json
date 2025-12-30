@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "description": "Comprehension evaluation prompts for 8 OWASP vulnerability categories",
+    "total_instances": 32,
+    "instances_per_cwe": 4,
+    "source_distribution": {
+      "cve_database": "40%",
+      "ctf_challenges": "30%",
+      "author_constructed": "30%"
+    }
+  },
+  "categories": {
+    "CWE-89": {
+      "name": "SQL Injection",
+      "instances": [
+        {
+          "id": "sql_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def get_user(user_id):\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    return db.execute(query)",
+          "ground_truth": {"severity": 9, "fix": "parameterized queries"}
+        },
+        {
+          "id": "sql_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "def search_products(name):\n    sql = \"SELECT * FROM products WHERE name LIKE '%\" + name + \"%'\"\n    return cursor.execute(sql).fetchall()",
+          "ground_truth": {"severity": 8, "fix": "parameterized LIKE"}
+        },
+        {
+          "id": "sql_03",
+          "language": "Python",
+          "source": "Author",
+          "code": "def authenticate(username, password):\n    query = f\"SELECT * FROM users WHERE username='{username}' AND password='{password}'\"\n    return len(db.execute(query)) > 0",
+          "ground_truth": {"severity": 10, "fix": "parameterized + hashing"}
+        },
+        {
+          "id": "sql_04",
+          "language": "JavaScript",
+          "source": "CVE-based",
+          "code": "async function getOrder(orderId) {\n    const query = `SELECT * FROM orders WHERE id = ${orderId}`;\n    return await db.query(query);\n}",
+          "ground_truth": {"severity": 8, "fix": "prepared statements"}
+        }
+      ]
+    },
+    "CWE-78": {
+      "name": "Command Injection",
+      "instances": [
+        {
+          "id": "cmd_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "import os\ndef convert_image(filename, fmt):\n    os.system(f\"convert {filename} output.{fmt}\")\n    return f\"output.{fmt}\"",
+          "ground_truth": {"severity": 10, "fix": "subprocess with shell=False"}
+        },
+        {
+          "id": "cmd_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "import subprocess\ndef ping_host(host):\n    return subprocess.check_output(f\"ping -c 1 {host}\", shell=True)",
+          "ground_truth": {"severity": 9, "fix": "subprocess.run with list args"}
+        },
+        {
+          "id": "cmd_03",
+          "language": "Python",
+          "source": "Author",
+          "code": "import os\ndef backup_database(db_name):\n    os.popen(f\"mysqldump {db_name} > backup.sql\")\n    return \"Backup complete\"",
+          "ground_truth": {"severity": 9, "fix": "use mysql connector directly"}
+        },
+        {
+          "id": "cmd_04",
+          "language": "JavaScript",
+          "source": "CVE-based",
+          "code": "const { exec } = require('child_process');\nfunction compressFile(filename) {\n    exec(`gzip ${filename}`, (err) => { if(err) throw err; });\n}",
+          "ground_truth": {"severity": 9, "fix": "execFile with array args"}
+        }
+      ]
+    },
+    "CWE-79": {
+      "name": "Cross-Site Scripting (XSS)",
+      "instances": [
+        {
+          "id": "xss_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "from flask import request\n@app.route('/search')\ndef search():\n    query = request.args.get('q', '')\n    return f\"<h1>Results for: {query}</h1>\"",
+          "ground_truth": {"severity": 7, "fix": "escape() or template auto-escaping"}
+        },
+        {
+          "id": "xss_02",
+          "language": "JavaScript",
+          "source": "CTF",
+          "code": "function displayMessage(msg) {\n    document.getElementById('output').innerHTML = msg;\n}",
+          "ground_truth": {"severity": 7, "fix": "textContent instead of innerHTML"}
+        },
+        {
+          "id": "xss_03",
+          "language": "Python",
+          "source": "Author",
+          "code": "def render_comment(comment):\n    return f\"<div class='comment'>{comment['text']}</div>\"",
+          "ground_truth": {"severity": 7, "fix": "html.escape()"}
+        },
+        {
+          "id": "xss_04",
+          "language": "JavaScript",
+          "source": "CVE-based",
+          "code": "const name = new URLSearchParams(location.search).get('name');\ndocument.write(`<p>Hello, ${name}!</p>`);",
+          "ground_truth": {"severity": 8, "fix": "sanitize input, use textContent"}
+        }
+      ]
+    },
+    "CWE-22": {
+      "name": "Path Traversal",
+      "instances": [
+        {
+          "id": "path_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def read_file(filename):\n    with open(f\"uploads/{filename}\") as f:\n        return f.read()",
+          "ground_truth": {"severity": 8, "fix": "os.path.basename + whitelist"}
+        },
+        {
+          "id": "path_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "import os\ndef serve_static(path):\n    full_path = os.path.join('/var/www/static', path)\n    return open(full_path).read()",
+          "ground_truth": {"severity": 8, "fix": "realpath check against base"}
+        },
+        {
+          "id": "path_03",
+          "language": "JavaScript",
+          "source": "Author",
+          "code": "const fs = require('fs');\napp.get('/download', (req, res) => {\n    const file = req.query.file;\n    res.sendFile(`./files/${file}`);\n});",
+          "ground_truth": {"severity": 8, "fix": "path.resolve + startsWith check"}
+        },
+        {
+          "id": "path_04",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def get_log(date):\n    return open(f\"/var/log/app/{date}.log\").read()",
+          "ground_truth": {"severity": 7, "fix": "validate date format strictly"}
+        }
+      ]
+    },
+    "CWE-918": {
+      "name": "Server-Side Request Forgery (SSRF)",
+      "instances": [
+        {
+          "id": "ssrf_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "import requests\ndef fetch_url(url):\n    response = requests.get(url)\n    return response.text",
+          "ground_truth": {"severity": 8, "fix": "URL whitelist + block internal IPs"}
+        },
+        {
+          "id": "ssrf_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "def proxy_request(target):\n    return urllib.request.urlopen(target).read()",
+          "ground_truth": {"severity": 9, "fix": "validate against allowed domains"}
+        },
+        {
+          "id": "ssrf_03",
+          "language": "JavaScript",
+          "source": "Author",
+          "code": "app.post('/webhook', async (req, res) => {\n    const { callback_url } = req.body;\n    await fetch(callback_url, { method: 'POST', body: 'OK' });\n    res.send('Notified');\n});",
+          "ground_truth": {"severity": 8, "fix": "validate callback domain"}
+        },
+        {
+          "id": "ssrf_04",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def get_avatar(avatar_url):\n    img_data = requests.get(avatar_url).content\n    return base64.b64encode(img_data)",
+          "ground_truth": {"severity": 7, "fix": "URL validation + timeout"}
+        }
+      ]
+    },
+    "CWE-611": {
+      "name": "XML External Entity (XXE)",
+      "instances": [
+        {
+          "id": "xxe_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "from lxml import etree\ndef parse_xml(xml_string):\n    parser = etree.XMLParser()\n    return etree.fromstring(xml_string, parser)",
+          "ground_truth": {"severity": 9, "fix": "XMLParser(resolve_entities=False)"}
+        },
+        {
+          "id": "xxe_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "import xml.etree.ElementTree as ET\ndef process_config(xml_data):\n    root = ET.fromstring(xml_data)\n    return root.find('settings')",
+          "ground_truth": {"severity": 8, "fix": "use defusedxml library"}
+        },
+        {
+          "id": "xxe_03",
+          "language": "Java",
+          "source": "Author",
+          "code": "DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();\nDocumentBuilder db = dbf.newDocumentBuilder();\nDocument doc = db.parse(new InputSource(new StringReader(xmlInput)));",
+          "ground_truth": {"severity": 9, "fix": "disable external entities in factory"}
+        },
+        {
+          "id": "xxe_04",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "from xml.dom.minidom import parseString\ndef parse_soap(soap_xml):\n    return parseString(soap_xml)",
+          "ground_truth": {"severity": 8, "fix": "use defusedxml.minidom"}
+        }
+      ]
+    },
+    "CWE-502": {
+      "name": "Insecure Deserialization",
+      "instances": [
+        {
+          "id": "deser_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "import pickle\ndef load_session(data):\n    return pickle.loads(base64.b64decode(data))",
+          "ground_truth": {"severity": 10, "fix": "use JSON or signed tokens"}
+        },
+        {
+          "id": "deser_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "import yaml\ndef load_config(config_str):\n    return yaml.load(config_str)",
+          "ground_truth": {"severity": 9, "fix": "yaml.safe_load()"}
+        },
+        {
+          "id": "deser_03",
+          "language": "Python",
+          "source": "Author",
+          "code": "import marshal\ndef load_cache(data):\n    return marshal.loads(data)",
+          "ground_truth": {"severity": 10, "fix": "use JSON serialization"}
+        },
+        {
+          "id": "deser_04",
+          "language": "JavaScript",
+          "source": "CVE-based",
+          "code": "const serialize = require('node-serialize');\napp.post('/data', (req, res) => {\n    const obj = serialize.unserialize(req.body.data);\n    res.json(obj);\n});",
+          "ground_truth": {"severity": 10, "fix": "use JSON.parse"}
+        }
+      ]
+    },
+    "CWE-94": {
+      "name": "Code Injection",
+      "instances": [
+        {
+          "id": "code_01",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def calculate(expression):\n    return eval(expression)",
+          "ground_truth": {"severity": 10, "fix": "ast.literal_eval or parser"}
+        },
+        {
+          "id": "code_02",
+          "language": "Python",
+          "source": "CTF",
+          "code": "def run_template(template, context):\n    exec(f\"result = f'{template}'\")\n    return result",
+          "ground_truth": {"severity": 10, "fix": "use jinja2 with sandbox"}
+        },
+        {
+          "id": "code_03",
+          "language": "JavaScript",
+          "source": "Author",
+          "code": "function compute(formula) {\n    return eval(formula);\n}",
+          "ground_truth": {"severity": 10, "fix": "use math.js or parser"}
+        },
+        {
+          "id": "code_04",
+          "language": "Python",
+          "source": "CVE-based",
+          "code": "def dynamic_import(module_name):\n    exec(f\"import {module_name}\")\n    return eval(module_name)",
+          "ground_truth": {"severity": 9, "fix": "importlib with whitelist"}
+        }
+      ]
+    }
+  },
+  "prompt_template": "Analyze the following code for security vulnerabilities:\n\n```{language}\n{code}\n```\n\nProvide:\n1. The vulnerability type (if any)\n2. An explanation of how it could be exploited\n3. A secure alternative implementation\n4. A severity rating from 1-10"
+}

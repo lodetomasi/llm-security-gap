@@ -1,0 +1,58 @@
+{
+  "cwe": "CWE-89",
+  "vulnerability_type": "SQL Injection",
+  "instances": [
+    {
+      "instance_id": 1,
+      "source": "CVE-2023-XXXXX (anonymized)",
+      "language": "Python",
+      "code": "def get_user(user_id):\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    return db.execute(query)",
+      "prompt": "Analyze the following code for security vulnerabilities:\n\n```python\ndef get_user(user_id):\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    return db.execute(query)\n```\n\nProvide:\n1. The vulnerability type (if any)\n2. An explanation of how it could be exploited\n3. A secure alternative implementation\n4. A severity rating from 1-10",
+      "ground_truth": {
+        "vulnerability": "SQL Injection",
+        "exploitation": "Attacker can input '1 OR 1=1' to bypass authentication or '1; DROP TABLE users' to delete data",
+        "fix": "Use parameterized queries: cursor.execute('SELECT * FROM users WHERE id = ?', (user_id,))",
+        "severity": 9
+      }
+    },
+    {
+      "instance_id": 2,
+      "source": "CTF Challenge - Web200",
+      "language": "Python",
+      "code": "def search_products(name):\n    sql = \"SELECT * FROM products WHERE name LIKE '%\" + name + \"%'\"\n    cursor.execute(sql)\n    return cursor.fetchall()",
+      "prompt": "Analyze the following code for security vulnerabilities:\n\n```python\ndef search_products(name):\n    sql = \"SELECT * FROM products WHERE name LIKE '%\" + name + \"%'\"\n    cursor.execute(sql)\n    return cursor.fetchall()\n```\n\nProvide:\n1. The vulnerability type (if any)\n2. An explanation of how it could be exploited\n3. A secure alternative implementation\n4. A severity rating from 1-10",
+      "ground_truth": {
+        "vulnerability": "SQL Injection",
+        "exploitation": "Input \"'; DROP TABLE products; --\" would terminate the LIKE clause and execute arbitrary SQL",
+        "fix": "Use parameterized queries with proper LIKE escaping",
+        "severity": 8
+      }
+    },
+    {
+      "instance_id": 3,
+      "source": "Author-constructed",
+      "language": "Python",
+      "code": "def authenticate(username, password):\n    query = f\"SELECT * FROM users WHERE username='{username}' AND password='{password}'\"\n    result = db.execute(query)\n    return len(result) > 0",
+      "prompt": "Analyze the following code for security vulnerabilities:\n\n```python\ndef authenticate(username, password):\n    query = f\"SELECT * FROM users WHERE username='{username}' AND password='{password}'\"\n    result = db.execute(query)\n    return len(result) > 0\n```\n\nProvide:\n1. The vulnerability type (if any)\n2. An explanation of how it could be exploited\n3. A secure alternative implementation\n4. A severity rating from 1-10",
+      "ground_truth": {
+        "vulnerability": "SQL Injection",
+        "exploitation": "Username \"admin'--\" bypasses password check entirely",
+        "fix": "Parameterized queries + password hashing",
+        "severity": 10
+      }
+    },
+    {
+      "instance_id": 4,
+      "source": "CVE-2022-XXXXX (anonymized)",
+      "language": "JavaScript",
+      "code": "async function getOrder(orderId) {\n    const query = `SELECT * FROM orders WHERE id = ${orderId}`;\n    return await db.query(query);\n}",
+      "prompt": "Analyze the following code for security vulnerabilities:\n\n```javascript\nasync function getOrder(orderId) {\n    const query = `SELECT * FROM orders WHERE id = ${orderId}`;\n    return await db.query(query);\n}\n```\n\nProvide:\n1. The vulnerability type (if any)\n2. An explanation of how it could be exploited\n3. A secure alternative implementation\n4. A severity rating from 1-10",
+      "ground_truth": {
+        "vulnerability": "SQL Injection",
+        "exploitation": "Template literal interpolation allows SQL injection via orderId parameter",
+        "fix": "Use prepared statements: db.query('SELECT * FROM orders WHERE id = $1', [orderId])",
+        "severity": 8
+      }
+    }
+  ]
+}

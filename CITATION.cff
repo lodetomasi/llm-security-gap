@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Characterizing the Gap Between Vulnerability Comprehension and Secure Code Generation in LLMs"
+message: "If you use this dataset or code, please cite the paper."
+type: dataset
+authors:
+  - name: "Anonymous"
+repository-code: "https://anonymous.4open.science/r/llm-vuln-gap"
+url: "https://anonymous.4open.science/r/llm-vuln-gap"
+abstract: >-
+  Replication package for EASE 2026 submission investigating
+  the relationship between vulnerability comprehension and secure code
+  generation in Large Language Models. Evaluates 11 LLMs across 8
+  vulnerability categories using 704 evaluations.
+keywords:
+  - large language models
+  - code security
+  - vulnerability detection
+  - secure code generation
+  - empirical software engineering
+license: MIT
+version: 1.0.0
+date-released: "2026-01-23"

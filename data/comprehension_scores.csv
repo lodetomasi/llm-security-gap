@@ -1,0 +1,353 @@
+eval_id,model,cwe,vuln_type,instance_id,comprehension,comp_identify,comp_understand,comp_fix,comp_severity,rater_a,rater_b
+starcoder2_15b_cwe-89_01,StarCoder2-15B,CWE-89,SQL Injection,1,0.738,1,2,1,0.952,0.736,0.758
+starcoder2_15b_cwe-89_02,StarCoder2-15B,CWE-89,SQL Injection,2,0.73,1,2,1,0.919,0.721,0.733
+starcoder2_15b_cwe-89_03,StarCoder2-15B,CWE-89,SQL Injection,3,0.548,1,1,0,0.857,0.546,0.54
+starcoder2_15b_cwe-89_04,StarCoder2-15B,CWE-89,SQL Injection,4,0.614,1,1,1,0.788,0.62,0.605
+starcoder2_15b_cwe-78_01,StarCoder2-15B,CWE-78,Command Injection,1,0.717,1,1,2,0.868,0.724,0.716
+starcoder2_15b_cwe-78_02,StarCoder2-15B,CWE-78,Command Injection,2,0.627,1,1,1,0.841,0.633,0.637
+starcoder2_15b_cwe-78_03,StarCoder2-15B,CWE-78,Command Injection,3,0.717,1,1,2,0.867,0.725,0.724
+starcoder2_15b_cwe-78_04,StarCoder2-15B,CWE-78,Command Injection,4,0.738,1,2,1,0.954,0.738,0.75
+starcoder2_15b_cwe-79_01,StarCoder2-15B,CWE-79,XSS,1,0.628,1,2,0,0.844,0.625,0.638
+starcoder2_15b_cwe-79_02,StarCoder2-15B,CWE-79,XSS,2,0.897,1,2,3,0.922,0.897,0.895
+starcoder2_15b_cwe-79_03,StarCoder2-15B,CWE-79,XSS,3,0.457,0,1,2,0.826,0.454,0.46
+starcoder2_15b_cwe-79_04,StarCoder2-15B,CWE-79,XSS,4,0.797,1,2,2,0.855,0.811,0.798
+starcoder2_15b_cwe-22_01,StarCoder2-15B,CWE-22,Path Traversal,1,0.521,0,2,2,0.749,0.51,0.514
+starcoder2_15b_cwe-22_02,StarCoder2-15B,CWE-22,Path Traversal,2,0.574,1,1,1,0.631,0.566,0.57
+starcoder2_15b_cwe-22_03,StarCoder2-15B,CWE-22,Path Traversal,3,0.833,1,2,2,0.999,0.829,0.833
+starcoder2_15b_cwe-22_04,StarCoder2-15B,CWE-22,Path Traversal,4,0.716,1,1,2,0.864,0.708,0.72
+starcoder2_15b_cwe-918_01,StarCoder2-15B,CWE-918,SSRF,1,0.467,0,2,1,0.867,0.469,0.469
+starcoder2_15b_cwe-918_02,StarCoder2-15B,CWE-918,SSRF,2,0.784,1,2,2,0.804,0.786,0.779
+starcoder2_15b_cwe-918_03,StarCoder2-15B,CWE-918,SSRF,3,0.539,1,1,0,0.821,0.543,0.545
+starcoder2_15b_cwe-918_04,StarCoder2-15B,CWE-918,SSRF,4,0.487,0,1,2,0.948,0.496,0.481
+starcoder2_15b_cwe-611_01,StarCoder2-15B,CWE-611,XXE,1,0.745,1,2,1,0.978,0.75,0.744
+starcoder2_15b_cwe-611_02,StarCoder2-15B,CWE-611,XXE,2,0.654,1,1,1,0.949,0.648,0.642
+starcoder2_15b_cwe-611_03,StarCoder2-15B,CWE-611,XXE,3,0.913,1,2,3,0.986,0.92,0.918
+starcoder2_15b_cwe-611_04,StarCoder2-15B,CWE-611,XXE,4,0.649,1,1,1,0.928,0.642,0.65
+starcoder2_15b_cwe-502_01,StarCoder2-15B,CWE-502,Deserialization,1,0.46,0,1,2,0.84,0.461,0.446
+starcoder2_15b_cwe-502_02,StarCoder2-15B,CWE-502,Deserialization,2,0.814,1,2,2,0.923,0.81,0.822
+starcoder2_15b_cwe-502_03,StarCoder2-15B,CWE-502,Deserialization,3,0.88,1,3,2,0.852,0.872,0.884
+starcoder2_15b_cwe-502_04,StarCoder2-15B,CWE-502,Deserialization,4,0.741,1,2,1,0.964,0.741,0.736
+starcoder2_15b_cwe-94_01,StarCoder2-15B,CWE-94,Code Injection,1,0.817,1,2,2,0.934,0.825,0.811
+starcoder2_15b_cwe-94_02,StarCoder2-15B,CWE-94,Code Injection,2,0.662,1,1,1,0.983,0.665,0.668
+starcoder2_15b_cwe-94_03,StarCoder2-15B,CWE-94,Code Injection,3,0.738,1,2,1,0.952,0.738,0.728
+starcoder2_15b_cwe-94_04,StarCoder2-15B,CWE-94,Code Injection,4,0.632,1,1,1,0.862,0.644,0.621
+deepseek_33b_cwe-89_01,DeepSeek-33B,CWE-89,SQL Injection,1,0.745,1,2,2,0.648,0.74,0.752
+deepseek_33b_cwe-89_02,DeepSeek-33B,CWE-89,SQL Injection,2,0.811,1,2,2,0.91,0.806,0.817
+deepseek_33b_cwe-89_03,DeepSeek-33B,CWE-89,SQL Injection,3,0.452,0,2,1,0.808,0.447,0.455
+deepseek_33b_cwe-89_04,DeepSeek-33B,CWE-89,SQL Injection,4,0.895,1,3,2,0.912,0.889,0.891
+deepseek_33b_cwe-78_01,DeepSeek-33B,CWE-78,Command Injection,1,0.454,0,2,1,0.817,0.459,0.44
+deepseek_33b_cwe-78_02,DeepSeek-33B,CWE-78,Command Injection,2,0.459,0,2,1,0.835,0.468,0.465
+deepseek_33b_cwe-78_03,DeepSeek-33B,CWE-78,Command Injection,3,0.798,1,2,2,0.86,0.803,0.793
+deepseek_33b_cwe-78_04,DeepSeek-33B,CWE-78,Command Injection,4,0.578,0,2,2,0.98,0.585,0.577
+deepseek_33b_cwe-79_01,DeepSeek-33B,CWE-79,XSS,1,0.699,1,1,2,0.796,0.697,0.709
+deepseek_33b_cwe-79_02,DeepSeek-33B,CWE-79,XSS,2,0.491,0,2,1,0.965,0.49,0.494
+deepseek_33b_cwe-79_03,DeepSeek-33B,CWE-79,XSS,3,0.366,0,1,1,0.796,0.363,0.367
+deepseek_33b_cwe-79_04,DeepSeek-33B,CWE-79,XSS,4,0.462,0,2,1,0.85,0.462,0.466
+deepseek_33b_cwe-22_01,DeepSeek-33B,CWE-22,Path Traversal,1,0.849,1,2,3,0.728,0.845,0.852
+deepseek_33b_cwe-22_02,DeepSeek-33B,CWE-22,Path Traversal,2,0.728,1,2,1,0.91,0.727,0.737
+deepseek_33b_cwe-22_03,DeepSeek-33B,CWE-22,Path Traversal,3,0.57,1,1,0,0.946,0.565,0.572
+deepseek_33b_cwe-22_04,DeepSeek-33B,CWE-22,Path Traversal,4,0.681,1,2,1,0.725,0.678,0.686
+deepseek_33b_cwe-918_01,DeepSeek-33B,CWE-918,SSRF,1,0.397,0,1,1,0.92,0.402,0.384
+deepseek_33b_cwe-918_02,DeepSeek-33B,CWE-918,SSRF,2,0.889,1,3,2,0.888,0.887,0.894
+deepseek_33b_cwe-918_03,DeepSeek-33B,CWE-918,SSRF,3,0.79,1,2,2,0.827,0.791,0.798
+deepseek_33b_cwe-918_04,DeepSeek-33B,CWE-918,SSRF,4,0.782,1,2,2,0.795,0.769,0.782
+deepseek_33b_cwe-611_01,DeepSeek-33B,CWE-611,XXE,1,0.779,1,2,2,0.784,0.771,0.779
+deepseek_33b_cwe-611_02,DeepSeek-33B,CWE-611,XXE,2,0.798,1,2,2,0.859,0.793,0.8
+deepseek_33b_cwe-611_03,DeepSeek-33B,CWE-611,XXE,3,0.571,0,1,3,0.952,0.569,0.565
+deepseek_33b_cwe-611_04,DeepSeek-33B,CWE-611,XXE,4,0.637,1,1,1,0.881,0.635,0.619
+deepseek_33b_cwe-502_01,DeepSeek-33B,CWE-502,Deserialization,1,0.796,1,2,2,0.852,0.807,0.814
+deepseek_33b_cwe-502_02,DeepSeek-33B,CWE-502,Deserialization,2,0.798,1,2,2,0.857,0.79,0.797
+deepseek_33b_cwe-502_03,DeepSeek-33B,CWE-502,Deserialization,3,0.748,1,2,1,0.993,0.737,0.733
+deepseek_33b_cwe-502_04,DeepSeek-33B,CWE-502,Deserialization,4,0.8,1,1,3,0.868,0.795,0.796
+deepseek_33b_cwe-94_01,DeepSeek-33B,CWE-94,Code Injection,1,0.558,1,1,0,0.897,0.558,0.546
+deepseek_33b_cwe-94_02,DeepSeek-33B,CWE-94,Code Injection,2,0.472,0,2,1,0.887,0.471,0.463
+deepseek_33b_cwe-94_03,DeepSeek-33B,CWE-94,Code Injection,3,0.523,0,1,3,0.757,0.523,0.518
+deepseek_33b_cwe-94_04,DeepSeek-33B,CWE-94,Code Injection,4,0.599,1,1,1,0.729,0.603,0.61
+codellama_34b_cwe-89_01,CodeLlama-34B,CWE-89,SQL Injection,1,0.747,1,1,2,0.987,0.739,0.755
+codellama_34b_cwe-89_02,CodeLlama-34B,CWE-89,SQL Injection,2,0.901,1,3,2,0.938,0.904,0.899
+codellama_34b_cwe-89_03,CodeLlama-34B,CWE-89,SQL Injection,3,0.711,1,1,2,0.845,0.694,0.704
+codellama_34b_cwe-89_04,CodeLlama-34B,CWE-89,SQL Injection,4,0.568,0,2,2,0.939,0.571,0.565
+codellama_34b_cwe-78_01,CodeLlama-34B,CWE-78,Command Injection,1,0.652,0,3,2,0.939,0.666,0.644
+codellama_34b_cwe-78_02,CodeLlama-34B,CWE-78,Command Injection,2,0.732,1,1,2,0.928,0.737,0.732
+codellama_34b_cwe-78_03,CodeLlama-34B,CWE-78,Command Injection,3,0.9,1,2,3,0.933,0.891,0.898
+codellama_34b_cwe-78_04,CodeLlama-34B,CWE-78,Command Injection,4,0.699,1,1,2,0.797,0.7,0.705
+codellama_34b_cwe-79_01,CodeLlama-34B,CWE-79,XSS,1,0.791,1,2,2,0.829,0.792,0.801
+codellama_34b_cwe-79_02,CodeLlama-34B,CWE-79,XSS,2,0.829,1,3,1,0.981,0.827,0.818
+codellama_34b_cwe-79_03,CodeLlama-34B,CWE-79,XSS,3,0.745,1,2,1,0.98,0.743,0.751
+codellama_34b_cwe-79_04,CodeLlama-34B,CWE-79,XSS,4,0.688,1,2,1,0.752,0.702,0.697
+codellama_34b_cwe-22_01,CodeLlama-34B,CWE-22,Path Traversal,1,0.744,1,1,2,0.976,0.741,0.743
+codellama_34b_cwe-22_02,CodeLlama-34B,CWE-22,Path Traversal,2,0.828,1,2,2,0.978,0.82,0.841
+codellama_34b_cwe-22_03,CodeLlama-34B,CWE-22,Path Traversal,3,0.792,1,1,3,0.834,0.802,0.787
+codellama_34b_cwe-22_04,CodeLlama-34B,CWE-22,Path Traversal,4,0.756,1,1,3,0.689,0.752,0.76
+codellama_34b_cwe-918_01,CodeLlama-34B,CWE-918,SSRF,1,0.798,1,2,2,0.859,0.811,0.785
+codellama_34b_cwe-918_02,CodeLlama-34B,CWE-918,SSRF,2,0.727,1,2,1,0.908,0.727,0.735
+codellama_34b_cwe-918_03,CodeLlama-34B,CWE-918,SSRF,3,0.684,1,2,1,0.735,0.685,0.7
+codellama_34b_cwe-918_04,CodeLlama-34B,CWE-918,SSRF,4,0.644,1,1,1,0.909,0.645,0.643
+codellama_34b_cwe-611_01,CodeLlama-34B,CWE-611,XXE,1,0.729,1,2,1,0.917,0.723,0.717
+codellama_34b_cwe-611_02,CodeLlama-34B,CWE-611,XXE,2,0.796,1,2,2,0.853,0.789,0.804
+codellama_34b_cwe-611_03,CodeLlama-34B,CWE-611,XXE,3,0.886,1,3,2,0.879,0.906,0.887
+codellama_34b_cwe-611_04,CodeLlama-34B,CWE-611,XXE,4,0.723,1,1,2,0.891,0.719,0.724
+codellama_34b_cwe-502_01,CodeLlama-34B,CWE-502,Deserialization,1,0.824,1,2,2,0.964,0.814,0.834
+codellama_34b_cwe-502_02,CodeLlama-34B,CWE-502,Deserialization,2,0.682,1,2,1,0.728,0.681,0.669
+codellama_34b_cwe-502_03,CodeLlama-34B,CWE-502,Deserialization,3,0.715,1,2,1,0.861,0.717,0.721
+codellama_34b_cwe-502_04,CodeLlama-34B,CWE-502,Deserialization,4,0.727,1,2,1,0.907,0.719,0.735
+codellama_34b_cwe-94_01,CodeLlama-34B,CWE-94,Code Injection,1,0.55,0,2,2,0.867,0.558,0.559
+codellama_34b_cwe-94_02,CodeLlama-34B,CWE-94,Code Injection,2,0.815,1,2,2,0.928,0.833,0.812
+codellama_34b_cwe-94_03,CodeLlama-34B,CWE-94,Code Injection,3,0.761,1,2,2,0.711,0.772,0.754
+codellama_34b_cwe-94_04,CodeLlama-34B,CWE-94,Code Injection,4,0.8,1,2,2,0.867,0.79,0.793
+qwen_7b_cwe-89_01,Qwen-7B,CWE-89,SQL Injection,1,0.538,1,1,0,0.819,0.547,0.535
+qwen_7b_cwe-89_02,Qwen-7B,CWE-89,SQL Injection,2,0.575,0,2,2,0.968,0.569,0.579
+qwen_7b_cwe-89_03,Qwen-7B,CWE-89,SQL Injection,3,0.773,1,2,2,0.757,0.778,0.791
+qwen_7b_cwe-89_04,Qwen-7B,CWE-89,SQL Injection,4,0.729,1,2,1,0.917,0.724,0.726
+qwen_7b_cwe-78_01,Qwen-7B,CWE-78,Command Injection,1,0.746,1,2,1,0.984,0.743,0.753
+qwen_7b_cwe-78_02,Qwen-7B,CWE-78,Command Injection,2,0.599,1,1,1,0.731,0.605,0.603
+qwen_7b_cwe-78_03,Qwen-7B,CWE-78,Command Injection,3,0.384,0,2,0,0.869,0.393,0.379
+qwen_7b_cwe-78_04,Qwen-7B,CWE-78,Command Injection,4,0.764,1,2,2,0.723,0.763,0.765
+qwen_7b_cwe-79_01,Qwen-7B,CWE-79,XSS,1,0.818,1,2,2,0.94,0.819,0.819
+qwen_7b_cwe-79_02,Qwen-7B,CWE-79,XSS,2,0.832,1,2,2,0.993,0.84,0.824
+qwen_7b_cwe-79_03,Qwen-7B,CWE-79,XSS,3,0.825,1,2,2,0.968,0.82,0.821
+qwen_7b_cwe-79_04,Qwen-7B,CWE-79,XSS,4,0.823,1,2,2,0.958,0.819,0.826
+qwen_7b_cwe-22_01,Qwen-7B,CWE-22,Path Traversal,1,0.735,1,2,1,0.939,0.737,0.73
+qwen_7b_cwe-22_02,Qwen-7B,CWE-22,Path Traversal,2,0.39,0,1,1,0.894,0.38,0.401
+qwen_7b_cwe-22_03,Qwen-7B,CWE-22,Path Traversal,3,0.707,1,1,2,0.828,0.716,0.712
+qwen_7b_cwe-22_04,Qwen-7B,CWE-22,Path Traversal,4,0.724,1,2,1,0.896,0.729,0.734
+qwen_7b_cwe-918_01,Qwen-7B,CWE-918,SSRF,1,0.748,1,2,1,0.993,0.754,0.751
+qwen_7b_cwe-918_02,Qwen-7B,CWE-918,SSRF,2,0.696,1,1,2,0.785,0.689,0.696
+qwen_7b_cwe-918_03,Qwen-7B,CWE-918,SSRF,3,0.629,1,1,1,0.851,0.62,0.633
+qwen_7b_cwe-918_04,Qwen-7B,CWE-918,SSRF,4,0.659,1,2,1,0.636,0.661,0.643
+qwen_7b_cwe-611_01,Qwen-7B,CWE-611,XXE,1,0.723,1,1,2,0.89,0.725,0.726
+qwen_7b_cwe-611_02,Qwen-7B,CWE-611,XXE,2,0.645,1,1,1,0.914,0.64,0.641
+qwen_7b_cwe-611_03,Qwen-7B,CWE-611,XXE,3,0.903,1,2,3,0.946,0.906,0.908
+qwen_7b_cwe-611_04,Qwen-7B,CWE-611,XXE,4,0.813,1,2,2,0.92,0.826,0.816
+qwen_7b_cwe-502_01,Qwen-7B,CWE-502,Deserialization,1,0.742,1,2,1,0.968,0.73,0.753
+qwen_7b_cwe-502_02,Qwen-7B,CWE-502,Deserialization,2,0.774,1,2,2,0.764,0.778,0.776
+qwen_7b_cwe-502_03,Qwen-7B,CWE-502,Deserialization,3,0.342,0,1,1,0.7,0.337,0.329
+qwen_7b_cwe-502_04,Qwen-7B,CWE-502,Deserialization,4,0.634,0,3,2,0.867,0.64,0.612
+qwen_7b_cwe-94_01,Qwen-7B,CWE-94,Code Injection,1,0.747,1,1,2,0.987,0.744,0.753
+qwen_7b_cwe-94_02,Qwen-7B,CWE-94,Code Injection,2,0.737,1,1,2,0.948,0.74,0.74
+qwen_7b_cwe-94_03,Qwen-7B,CWE-94,Code Injection,3,0.657,1,2,0,0.962,0.659,0.654
+qwen_7b_cwe-94_04,Qwen-7B,CWE-94,Code Injection,4,0.885,1,2,3,0.872,0.891,0.885
+gemma_7b_cwe-89_01,Gemma-7B,CWE-89,SQL Injection,1,0.75,1,2,1,0.999,0.754,0.757
+gemma_7b_cwe-89_02,Gemma-7B,CWE-89,SQL Injection,2,0.475,0,2,2,0.566,0.483,0.484
+gemma_7b_cwe-89_03,Gemma-7B,CWE-89,SQL Injection,3,0.726,1,2,1,0.903,0.717,0.72
+gemma_7b_cwe-89_04,Gemma-7B,CWE-89,SQL Injection,4,0.742,1,1,2,0.967,0.742,0.745
+gemma_7b_cwe-78_01,Gemma-7B,CWE-78,Command Injection,1,0.82,1,2,2,0.947,0.81,0.821
+gemma_7b_cwe-78_02,Gemma-7B,CWE-78,Command Injection,2,0.724,1,1,2,0.895,0.719,0.741
+gemma_7b_cwe-78_03,Gemma-7B,CWE-78,Command Injection,3,0.545,0,2,2,0.846,0.543,0.542
+gemma_7b_cwe-78_04,Gemma-7B,CWE-78,Command Injection,4,0.586,1,1,1,0.677,0.575,0.573
+gemma_7b_cwe-79_01,Gemma-7B,CWE-79,XSS,1,0.895,1,3,2,0.914,0.893,0.888
+gemma_7b_cwe-79_02,Gemma-7B,CWE-79,XSS,2,0.489,0,2,1,0.958,0.484,0.491
+gemma_7b_cwe-79_03,Gemma-7B,CWE-79,XSS,3,0.727,1,1,2,0.907,0.73,0.723
+gemma_7b_cwe-79_04,Gemma-7B,CWE-79,XSS,4,0.715,1,2,1,0.859,0.716,0.719
+gemma_7b_cwe-22_01,Gemma-7B,CWE-22,Path Traversal,1,0.785,1,2,2,0.806,0.788,0.794
+gemma_7b_cwe-22_02,Gemma-7B,CWE-22,Path Traversal,2,0.474,0,2,1,0.896,0.47,0.464
+gemma_7b_cwe-22_03,Gemma-7B,CWE-22,Path Traversal,3,0.636,0,2,3,0.876,0.656,0.625
+gemma_7b_cwe-22_04,Gemma-7B,CWE-22,Path Traversal,4,0.655,1,1,1,0.954,0.659,0.667
+gemma_7b_cwe-918_01,Gemma-7B,CWE-918,SSRF,1,0.723,1,2,1,0.893,0.724,0.715
+gemma_7b_cwe-918_02,Gemma-7B,CWE-918,SSRF,2,0.692,1,1,2,0.767,0.691,0.685
+gemma_7b_cwe-918_03,Gemma-7B,CWE-918,SSRF,3,0.704,1,2,1,0.815,0.713,0.7
+gemma_7b_cwe-918_04,Gemma-7B,CWE-918,SSRF,4,0.831,1,3,1,0.992,0.84,0.832
+gemma_7b_cwe-611_01,Gemma-7B,CWE-611,XXE,1,0.82,1,2,2,0.946,0.818,0.824
+gemma_7b_cwe-611_02,Gemma-7B,CWE-611,XXE,2,0.7,1,2,1,0.8,0.699,0.694
+gemma_7b_cwe-611_03,Gemma-7B,CWE-611,XXE,3,0.874,1,2,3,0.83,0.867,0.874
+gemma_7b_cwe-611_04,Gemma-7B,CWE-611,XXE,4,0.83,1,2,2,0.985,0.83,0.836
+gemma_7b_cwe-502_01,Gemma-7B,CWE-502,Deserialization,1,0.664,1,2,0,0.99,0.675,0.66
+gemma_7b_cwe-502_02,Gemma-7B,CWE-502,Deserialization,2,0.73,1,1,2,0.921,0.725,0.728
+gemma_7b_cwe-502_03,Gemma-7B,CWE-502,Deserialization,3,0.656,1,2,0,0.956,0.657,0.644
+gemma_7b_cwe-502_04,Gemma-7B,CWE-502,Deserialization,4,0.788,1,1,3,0.817,0.768,0.795
+gemma_7b_cwe-94_01,Gemma-7B,CWE-94,Code Injection,1,0.738,1,1,2,0.953,0.731,0.72
+gemma_7b_cwe-94_02,Gemma-7B,CWE-94,Code Injection,2,0.653,1,2,1,0.611,0.664,0.651
+gemma_7b_cwe-94_03,Gemma-7B,CWE-94,Code Injection,3,0.749,1,2,1,0.995,0.757,0.737
+gemma_7b_cwe-94_04,Gemma-7B,CWE-94,Code Injection,4,0.465,0,2,1,0.86,0.482,0.46
+qwen_72b_cwe-89_01,Qwen-72B,CWE-89,SQL Injection,1,0.744,1,2,1,0.975,0.749,0.749
+qwen_72b_cwe-89_02,Qwen-72B,CWE-89,SQL Injection,2,0.912,1,2,3,0.98,0.91,0.91
+qwen_72b_cwe-89_03,Qwen-72B,CWE-89,SQL Injection,3,0.701,1,2,1,0.805,0.705,0.697
+qwen_72b_cwe-89_04,Qwen-72B,CWE-89,SQL Injection,4,0.647,1,1,1,0.92,0.647,0.649
+qwen_72b_cwe-78_01,Qwen-72B,CWE-78,Command Injection,1,0.737,1,2,1,0.946,0.739,0.746
+qwen_72b_cwe-78_02,Qwen-72B,CWE-78,Command Injection,2,0.676,1,2,1,0.705,0.681,0.685
+qwen_72b_cwe-78_03,Qwen-72B,CWE-78,Command Injection,3,0.488,0,1,2,0.95,0.478,0.487
+qwen_72b_cwe-78_04,Qwen-72B,CWE-78,Command Injection,4,0.811,1,2,2,0.913,0.807,0.815
+qwen_72b_cwe-79_01,Qwen-72B,CWE-79,XSS,1,0.876,1,2,3,0.839,0.881,0.882
+qwen_72b_cwe-79_02,Qwen-72B,CWE-79,XSS,2,0.736,1,1,2,0.943,0.745,0.731
+qwen_72b_cwe-79_03,Qwen-72B,CWE-79,XSS,3,0.833,1,2,2,0.997,0.833,0.822
+qwen_72b_cwe-79_04,Qwen-72B,CWE-79,XSS,4,0.468,0,1,2,0.872,0.474,0.465
+qwen_72b_cwe-22_01,Qwen-72B,CWE-22,Path Traversal,1,0.695,1,2,1,0.781,0.691,0.704
+qwen_72b_cwe-22_02,Qwen-72B,CWE-22,Path Traversal,2,0.703,1,2,1,0.811,0.704,0.714
+qwen_72b_cwe-22_03,Qwen-72B,CWE-22,Path Traversal,3,0.891,1,3,2,0.897,0.89,0.885
+qwen_72b_cwe-22_04,Qwen-72B,CWE-22,Path Traversal,4,0.978,1,3,3,0.911,0.99,0.983
+qwen_72b_cwe-918_01,Qwen-72B,CWE-918,SSRF,1,0.74,1,2,1,0.961,0.736,0.731
+qwen_72b_cwe-918_02,Qwen-72B,CWE-918,SSRF,2,0.859,1,2,3,0.769,0.859,0.873
+qwen_72b_cwe-918_03,Qwen-72B,CWE-918,SSRF,3,0.638,1,1,1,0.884,0.635,0.641
+qwen_72b_cwe-918_04,Qwen-72B,CWE-918,SSRF,4,0.44,0,2,1,0.761,0.446,0.449
+qwen_72b_cwe-611_01,Qwen-72B,CWE-611,XXE,1,0.825,1,2,2,0.967,0.821,0.817
+qwen_72b_cwe-611_02,Qwen-72B,CWE-611,XXE,2,0.74,1,1,2,0.959,0.744,0.74
+qwen_72b_cwe-611_03,Qwen-72B,CWE-611,XXE,3,0.708,1,1,2,0.83,0.717,0.705
+qwen_72b_cwe-611_04,Qwen-72B,CWE-611,XXE,4,0.397,0,1,1,0.923,0.399,0.406
+qwen_72b_cwe-502_01,Qwen-72B,CWE-502,Deserialization,1,0.494,0,2,1,0.977,0.488,0.503
+qwen_72b_cwe-502_02,Qwen-72B,CWE-502,Deserialization,2,0.724,1,3,1,0.562,0.726,0.722
+qwen_72b_cwe-502_03,Qwen-72B,CWE-502,Deserialization,3,0.878,1,2,3,0.845,0.866,0.878
+qwen_72b_cwe-502_04,Qwen-72B,CWE-502,Deserialization,4,0.782,1,2,2,0.794,0.784,0.776
+qwen_72b_cwe-94_01,Qwen-72B,CWE-94,Code Injection,1,0.742,1,2,1,0.97,0.745,0.736
+qwen_72b_cwe-94_02,Qwen-72B,CWE-94,Code Injection,2,0.785,1,2,2,0.808,0.785,0.796
+qwen_72b_cwe-94_03,Qwen-72B,CWE-94,Code Injection,3,0.809,1,2,2,0.902,0.812,0.8
+qwen_72b_cwe-94_04,Qwen-72B,CWE-94,Code Injection,4,0.568,0,2,2,0.939,0.577,0.588
+mixtral_8x22b_cwe-89_01,Mixtral-8x22B,CWE-89,SQL Injection,1,0.728,1,2,1,0.911,0.725,0.723
+mixtral_8x22b_cwe-89_02,Mixtral-8x22B,CWE-89,SQL Injection,2,0.707,1,2,1,0.829,0.716,0.719
+mixtral_8x22b_cwe-89_03,Mixtral-8x22B,CWE-89,SQL Injection,3,0.749,1,2,2,0.664,0.746,0.749
+mixtral_8x22b_cwe-89_04,Mixtral-8x22B,CWE-89,SQL Injection,4,0.813,1,2,2,0.918,0.804,0.822
+mixtral_8x22b_cwe-78_01,Mixtral-8x22B,CWE-78,Command Injection,1,0.73,1,2,1,0.921,0.745,0.717
+mixtral_8x22b_cwe-78_02,Mixtral-8x22B,CWE-78,Command Injection,2,0.761,1,2,2,0.709,0.744,0.767
+mixtral_8x22b_cwe-78_03,Mixtral-8x22B,CWE-78,Command Injection,3,0.701,1,1,2,0.802,0.7,0.699
+mixtral_8x22b_cwe-78_04,Mixtral-8x22B,CWE-78,Command Injection,4,0.824,1,2,2,0.964,0.828,0.822
+mixtral_8x22b_cwe-79_01,Mixtral-8x22B,CWE-79,XSS,1,0.814,1,2,2,0.921,0.813,0.815
+mixtral_8x22b_cwe-79_02,Mixtral-8x22B,CWE-79,XSS,2,0.764,1,2,2,0.724,0.757,0.766
+mixtral_8x22b_cwe-79_03,Mixtral-8x22B,CWE-79,XSS,3,0.739,1,2,1,0.956,0.743,0.744
+mixtral_8x22b_cwe-79_04,Mixtral-8x22B,CWE-79,XSS,4,0.769,1,2,2,0.743,0.764,0.755
+mixtral_8x22b_cwe-22_01,Mixtral-8x22B,CWE-22,Path Traversal,1,0.708,0,3,3,0.833,0.698,0.706
+mixtral_8x22b_cwe-22_02,Mixtral-8x22B,CWE-22,Path Traversal,2,0.857,1,3,2,0.76,0.845,0.863
+mixtral_8x22b_cwe-22_03,Mixtral-8x22B,CWE-22,Path Traversal,3,0.745,1,1,2,0.978,0.734,0.753
+mixtral_8x22b_cwe-22_04,Mixtral-8x22B,CWE-22,Path Traversal,4,0.826,1,2,2,0.971,0.812,0.827
+mixtral_8x22b_cwe-918_01,Mixtral-8x22B,CWE-918,SSRF,1,0.74,1,2,1,0.96,0.747,0.734
+mixtral_8x22b_cwe-918_02,Mixtral-8x22B,CWE-918,SSRF,2,0.581,0,1,3,0.991,0.579,0.573
+mixtral_8x22b_cwe-918_03,Mixtral-8x22B,CWE-918,SSRF,3,0.743,1,1,2,0.973,0.744,0.747
+mixtral_8x22b_cwe-918_04,Mixtral-8x22B,CWE-918,SSRF,4,0.911,1,3,2,0.978,0.903,0.922
+mixtral_8x22b_cwe-611_01,Mixtral-8x22B,CWE-611,XXE,1,0.805,1,2,2,0.886,0.819,0.798
+mixtral_8x22b_cwe-611_02,Mixtral-8x22B,CWE-611,XXE,2,0.746,1,2,1,0.984,0.757,0.744
+mixtral_8x22b_cwe-611_03,Mixtral-8x22B,CWE-611,XXE,3,0.898,1,2,3,0.927,0.9,0.884
+mixtral_8x22b_cwe-611_04,Mixtral-8x22B,CWE-611,XXE,4,0.817,1,2,2,0.936,0.827,0.804
+mixtral_8x22b_cwe-502_01,Mixtral-8x22B,CWE-502,Deserialization,1,0.788,1,2,2,0.818,0.791,0.788
+mixtral_8x22b_cwe-502_02,Mixtral-8x22B,CWE-502,Deserialization,2,0.698,1,1,2,0.791,0.697,0.695
+mixtral_8x22b_cwe-502_03,Mixtral-8x22B,CWE-502,Deserialization,3,0.789,1,2,2,0.822,0.801,0.788
+mixtral_8x22b_cwe-502_04,Mixtral-8x22B,CWE-502,Deserialization,4,0.739,1,2,1,0.958,0.748,0.742
+mixtral_8x22b_cwe-94_01,Mixtral-8x22B,CWE-94,Code Injection,1,0.757,1,2,2,0.694,0.75,0.759
+mixtral_8x22b_cwe-94_02,Mixtral-8x22B,CWE-94,Code Injection,2,0.731,1,1,2,0.925,0.722,0.735
+mixtral_8x22b_cwe-94_03,Mixtral-8x22B,CWE-94,Code Injection,3,0.634,1,1,1,0.87,0.633,0.622
+mixtral_8x22b_cwe-94_04,Mixtral-8x22B,CWE-94,Code Injection,4,0.741,1,2,1,0.964,0.749,0.742
+llama_3_70b_cwe-89_01,Llama-3-70B,CWE-89,SQL Injection,1,0.717,1,2,1,0.869,0.719,0.72
+llama_3_70b_cwe-89_02,Llama-3-70B,CWE-89,SQL Injection,2,0.498,0,1,2,0.992,0.496,0.497
+llama_3_70b_cwe-89_03,Llama-3-70B,CWE-89,SQL Injection,3,0.806,1,2,2,0.891,0.815,0.805
+llama_3_70b_cwe-89_04,Llama-3-70B,CWE-89,SQL Injection,4,0.825,1,1,3,0.967,0.83,0.826
+llama_3_70b_cwe-78_01,Llama-3-70B,CWE-78,Command Injection,1,0.792,1,2,2,0.835,0.8,0.786
+llama_3_70b_cwe-78_02,Llama-3-70B,CWE-78,Command Injection,2,0.634,1,1,1,0.871,0.629,0.633
+llama_3_70b_cwe-78_03,Llama-3-70B,CWE-78,Command Injection,3,0.806,1,2,2,0.893,0.804,0.806
+llama_3_70b_cwe-78_04,Llama-3-70B,CWE-78,Command Injection,4,0.89,1,2,3,0.894,0.89,0.884
+llama_3_70b_cwe-79_01,Llama-3-70B,CWE-79,XSS,1,0.807,1,2,2,0.894,0.816,0.799
+llama_3_70b_cwe-79_02,Llama-3-70B,CWE-79,XSS,2,0.743,1,1,2,0.971,0.747,0.747
+llama_3_70b_cwe-79_03,Llama-3-70B,CWE-79,XSS,3,0.749,1,1,2,0.997,0.77,0.743
+llama_3_70b_cwe-79_04,Llama-3-70B,CWE-79,XSS,4,0.66,1,2,0,0.972,0.655,0.657
+llama_3_70b_cwe-22_01,Llama-3-70B,CWE-22,Path Traversal,1,0.749,1,2,1,0.998,0.748,0.748
+llama_3_70b_cwe-22_02,Llama-3-70B,CWE-22,Path Traversal,2,0.717,1,1,2,0.87,0.728,0.724
+llama_3_70b_cwe-22_03,Llama-3-70B,CWE-22,Path Traversal,3,0.815,1,2,2,0.927,0.824,0.807
+llama_3_70b_cwe-22_04,Llama-3-70B,CWE-22,Path Traversal,4,0.828,1,2,2,0.979,0.833,0.837
+llama_3_70b_cwe-918_01,Llama-3-70B,CWE-918,SSRF,1,0.416,0,2,0,0.997,0.422,0.426
+llama_3_70b_cwe-918_02,Llama-3-70B,CWE-918,SSRF,2,0.744,1,2,1,0.978,0.735,0.757
+llama_3_70b_cwe-918_03,Llama-3-70B,CWE-918,SSRF,3,0.815,1,2,2,0.928,0.82,0.808
+llama_3_70b_cwe-918_04,Llama-3-70B,CWE-918,SSRF,4,0.626,0,3,2,0.839,0.626,0.618
+llama_3_70b_cwe-611_01,Llama-3-70B,CWE-611,XXE,1,0.707,1,2,1,0.83,0.712,0.715
+llama_3_70b_cwe-611_02,Llama-3-70B,CWE-611,XXE,2,0.721,1,0,3,0.882,0.712,0.71
+llama_3_70b_cwe-611_03,Llama-3-70B,CWE-611,XXE,3,0.659,0,2,3,0.968,0.659,0.664
+llama_3_70b_cwe-611_04,Llama-3-70B,CWE-611,XXE,4,0.833,1,2,2,0.997,0.821,0.827
+llama_3_70b_cwe-502_01,Llama-3-70B,CWE-502,Deserialization,1,0.665,1,1,1,0.994,0.655,0.668
+llama_3_70b_cwe-502_02,Llama-3-70B,CWE-502,Deserialization,2,0.727,1,2,1,0.908,0.721,0.743
+llama_3_70b_cwe-502_03,Llama-3-70B,CWE-502,Deserialization,3,0.78,1,2,2,0.788,0.781,0.776
+llama_3_70b_cwe-502_04,Llama-3-70B,CWE-502,Deserialization,4,0.879,1,2,3,0.848,0.878,0.89
+llama_3_70b_cwe-94_01,Llama-3-70B,CWE-94,Code Injection,1,0.704,1,2,1,0.815,0.708,0.697
+llama_3_70b_cwe-94_02,Llama-3-70B,CWE-94,Code Injection,2,0.733,1,2,1,0.931,0.726,0.737
+llama_3_70b_cwe-94_03,Llama-3-70B,CWE-94,Code Injection,3,0.748,1,1,2,0.994,0.751,0.753
+llama_3_70b_cwe-94_04,Llama-3-70B,CWE-94,Code Injection,4,0.583,0,2,2,0.997,0.573,0.588
+gpt_4o_cwe-89_01,GPT-4o,CWE-89,SQL Injection,1,0.801,1,2,2,0.869,0.807,0.812
+gpt_4o_cwe-89_02,GPT-4o,CWE-89,SQL Injection,2,0.809,1,2,2,0.903,0.809,0.802
+gpt_4o_cwe-89_03,GPT-4o,CWE-89,SQL Injection,3,0.44,0,2,1,0.76,0.445,0.428
+gpt_4o_cwe-89_04,GPT-4o,CWE-89,SQL Injection,4,0.462,0,2,1,0.849,0.474,0.463
+gpt_4o_cwe-78_01,GPT-4o,CWE-78,Command Injection,1,0.568,0,1,3,0.939,0.577,0.569
+gpt_4o_cwe-78_02,GPT-4o,CWE-78,Command Injection,2,0.57,1,0,1,0.945,0.566,0.569
+gpt_4o_cwe-78_03,GPT-4o,CWE-78,Command Injection,3,0.807,1,2,2,0.894,0.803,0.812
+gpt_4o_cwe-78_04,GPT-4o,CWE-78,Command Injection,4,0.877,1,2,3,0.839,0.869,0.869
+gpt_4o_cwe-79_01,GPT-4o,CWE-79,XSS,1,0.707,1,1,2,0.83,0.718,0.695
+gpt_4o_cwe-79_02,GPT-4o,CWE-79,XSS,2,0.649,1,1,1,0.931,0.646,0.651
+gpt_4o_cwe-79_03,GPT-4o,CWE-79,XSS,3,0.852,1,2,3,0.742,0.876,0.86
+gpt_4o_cwe-79_04,GPT-4o,CWE-79,XSS,4,0.73,1,2,1,0.922,0.732,0.734
+gpt_4o_cwe-22_01,GPT-4o,CWE-22,Path Traversal,1,0.813,1,2,2,0.919,0.81,0.814
+gpt_4o_cwe-22_02,GPT-4o,CWE-22,Path Traversal,2,0.471,0,1,2,0.883,0.471,0.466
+gpt_4o_cwe-22_03,GPT-4o,CWE-22,Path Traversal,3,0.581,0,3,1,0.989,0.584,0.583
+gpt_4o_cwe-22_04,GPT-4o,CWE-22,Path Traversal,4,0.831,1,2,2,0.989,0.827,0.824
+gpt_4o_cwe-918_01,GPT-4o,CWE-918,SSRF,1,0.804,1,2,2,0.884,0.813,0.808
+gpt_4o_cwe-918_02,GPT-4o,CWE-918,SSRF,2,0.911,1,3,2,0.978,0.92,0.922
+gpt_4o_cwe-918_03,GPT-4o,CWE-918,SSRF,3,0.777,1,2,2,0.773,0.767,0.775
+gpt_4o_cwe-918_04,GPT-4o,CWE-918,SSRF,4,0.769,1,2,2,0.744,0.772,0.769
+gpt_4o_cwe-611_01,GPT-4o,CWE-611,XXE,1,0.894,1,2,3,0.908,0.904,0.903
+gpt_4o_cwe-611_02,GPT-4o,CWE-611,XXE,2,0.809,1,3,1,0.902,0.8,0.802
+gpt_4o_cwe-611_03,GPT-4o,CWE-611,XXE,3,0.702,1,1,2,0.807,0.704,0.7
+gpt_4o_cwe-611_04,GPT-4o,CWE-611,XXE,4,0.823,1,2,2,0.959,0.831,0.832
+gpt_4o_cwe-502_01,GPT-4o,CWE-502,Deserialization,1,0.772,1,2,2,0.756,0.777,0.775
+gpt_4o_cwe-502_02,GPT-4o,CWE-502,Deserialization,2,0.795,1,2,2,0.847,0.789,0.79
+gpt_4o_cwe-502_03,GPT-4o,CWE-502,Deserialization,3,0.826,1,2,2,0.972,0.82,0.839
+gpt_4o_cwe-502_04,GPT-4o,CWE-502,Deserialization,4,0.782,1,1,3,0.793,0.778,0.784
+gpt_4o_cwe-94_01,GPT-4o,CWE-94,Code Injection,1,0.742,1,2,1,0.969,0.747,0.73
+gpt_4o_cwe-94_02,GPT-4o,CWE-94,Code Injection,2,0.832,1,2,2,0.994,0.828,0.839
+gpt_4o_cwe-94_03,GPT-4o,CWE-94,Code Injection,3,0.739,1,2,1,0.957,0.739,0.734
+gpt_4o_cwe-94_04,GPT-4o,CWE-94,Code Injection,4,0.779,1,2,2,0.782,0.775,0.79
+claude_3.5_sonnet_cwe-89_01,Claude-3.5-Sonnet,CWE-89,SQL Injection,1,0.794,1,2,2,0.844,0.797,0.799
+claude_3.5_sonnet_cwe-89_02,Claude-3.5-Sonnet,CWE-89,SQL Injection,2,0.81,1,2,2,0.908,0.808,0.803
+claude_3.5_sonnet_cwe-89_03,Claude-3.5-Sonnet,CWE-89,SQL Injection,3,0.647,1,1,1,0.92,0.67,0.65
+claude_3.5_sonnet_cwe-89_04,Claude-3.5-Sonnet,CWE-89,SQL Injection,4,0.824,1,2,2,0.962,0.827,0.829
+claude_3.5_sonnet_cwe-78_01,Claude-3.5-Sonnet,CWE-78,Command Injection,1,0.813,1,2,2,0.92,0.809,0.814
+claude_3.5_sonnet_cwe-78_02,Claude-3.5-Sonnet,CWE-78,Command Injection,2,0.799,1,2,2,0.862,0.787,0.785
+claude_3.5_sonnet_cwe-78_03,Claude-3.5-Sonnet,CWE-78,Command Injection,3,0.817,1,2,2,0.936,0.82,0.817
+claude_3.5_sonnet_cwe-78_04,Claude-3.5-Sonnet,CWE-78,Command Injection,4,0.9,1,2,3,0.935,0.903,0.907
+claude_3.5_sonnet_cwe-79_01,Claude-3.5-Sonnet,CWE-79,XSS,1,0.804,1,2,2,0.882,0.807,0.788
+claude_3.5_sonnet_cwe-79_02,Claude-3.5-Sonnet,CWE-79,XSS,2,0.908,1,2,3,0.965,0.898,0.906
+claude_3.5_sonnet_cwe-79_03,Claude-3.5-Sonnet,CWE-79,XSS,3,0.721,1,1,2,0.885,0.721,0.719
+claude_3.5_sonnet_cwe-79_04,Claude-3.5-Sonnet,CWE-79,XSS,4,0.851,1,3,2,0.736,0.846,0.853
+claude_3.5_sonnet_cwe-22_01,Claude-3.5-Sonnet,CWE-22,Path Traversal,1,0.808,1,2,2,0.897,0.814,0.799
+claude_3.5_sonnet_cwe-22_02,Claude-3.5-Sonnet,CWE-22,Path Traversal,2,0.584,1,1,1,0.669,0.595,0.589
+claude_3.5_sonnet_cwe-22_03,Claude-3.5-Sonnet,CWE-22,Path Traversal,3,0.838,1,3,2,0.683,0.834,0.841
+claude_3.5_sonnet_cwe-22_04,Claude-3.5-Sonnet,CWE-22,Path Traversal,4,0.862,1,3,2,0.782,0.875,0.87
+claude_3.5_sonnet_cwe-918_01,Claude-3.5-Sonnet,CWE-918,SSRF,1,0.871,1,3,2,0.817,0.878,0.872
+claude_3.5_sonnet_cwe-918_02,Claude-3.5-Sonnet,CWE-918,SSRF,2,0.721,1,2,1,0.882,0.712,0.714
+claude_3.5_sonnet_cwe-918_03,Claude-3.5-Sonnet,CWE-918,SSRF,3,0.666,1,1,1,0.995,0.659,0.654
+claude_3.5_sonnet_cwe-918_04,Claude-3.5-Sonnet,CWE-918,SSRF,4,0.795,1,2,2,0.845,0.799,0.8
+claude_3.5_sonnet_cwe-611_01,Claude-3.5-Sonnet,CWE-611,XXE,1,0.696,1,2,1,0.785,0.694,0.705
+claude_3.5_sonnet_cwe-611_02,Claude-3.5-Sonnet,CWE-611,XXE,2,0.775,1,2,2,0.765,0.783,0.765
+claude_3.5_sonnet_cwe-611_03,Claude-3.5-Sonnet,CWE-611,XXE,3,0.822,1,2,2,0.956,0.832,0.83
+claude_3.5_sonnet_cwe-611_04,Claude-3.5-Sonnet,CWE-611,XXE,4,0.81,1,2,2,0.908,0.812,0.818
+claude_3.5_sonnet_cwe-502_01,Claude-3.5-Sonnet,CWE-502,Deserialization,1,0.898,1,2,3,0.926,0.908,0.901
+claude_3.5_sonnet_cwe-502_02,Claude-3.5-Sonnet,CWE-502,Deserialization,2,0.755,1,2,2,0.685,0.759,0.748
+claude_3.5_sonnet_cwe-502_03,Claude-3.5-Sonnet,CWE-502,Deserialization,3,0.892,1,3,2,0.902,0.888,0.896
+claude_3.5_sonnet_cwe-502_04,Claude-3.5-Sonnet,CWE-502,Deserialization,4,1.0,1,3,3,0.999,1.0,1.0
+claude_3.5_sonnet_cwe-94_01,Claude-3.5-Sonnet,CWE-94,Code Injection,1,0.738,1,2,1,0.953,0.732,0.74
+claude_3.5_sonnet_cwe-94_02,Claude-3.5-Sonnet,CWE-94,Code Injection,2,0.608,0,2,3,0.764,0.604,0.606
+claude_3.5_sonnet_cwe-94_03,Claude-3.5-Sonnet,CWE-94,Code Injection,3,0.744,1,2,1,0.978,0.738,0.739
+claude_3.5_sonnet_cwe-94_04,Claude-3.5-Sonnet,CWE-94,Code Injection,4,0.727,1,2,1,0.907,0.723,0.725
+gemini_1.5_pro_cwe-89_01,Gemini-1.5-Pro,CWE-89,SQL Injection,1,0.483,0,2,1,0.931,0.469,0.485
+gemini_1.5_pro_cwe-89_02,Gemini-1.5-Pro,CWE-89,SQL Injection,2,0.82,1,2,2,0.947,0.823,0.812
+gemini_1.5_pro_cwe-89_03,Gemini-1.5-Pro,CWE-89,SQL Injection,3,0.738,1,1,2,0.95,0.724,0.724
+gemini_1.5_pro_cwe-89_04,Gemini-1.5-Pro,CWE-89,SQL Injection,4,0.802,1,2,2,0.873,0.801,0.797
+gemini_1.5_pro_cwe-78_01,Gemini-1.5-Pro,CWE-78,Command Injection,1,0.891,1,2,3,0.898,0.889,0.893
+gemini_1.5_pro_cwe-78_02,Gemini-1.5-Pro,CWE-78,Command Injection,2,0.802,1,2,2,0.873,0.819,0.801
+gemini_1.5_pro_cwe-78_03,Gemini-1.5-Pro,CWE-78,Command Injection,3,0.528,1,1,0,0.78,0.516,0.521
+gemini_1.5_pro_cwe-78_04,Gemini-1.5-Pro,CWE-78,Command Injection,4,0.715,1,2,1,0.861,0.71,0.709
+gemini_1.5_pro_cwe-79_01,Gemini-1.5-Pro,CWE-79,XSS,1,0.826,1,2,2,0.971,0.819,0.828
+gemini_1.5_pro_cwe-79_02,Gemini-1.5-Pro,CWE-79,XSS,2,0.897,1,2,3,0.923,0.892,0.901
+gemini_1.5_pro_cwe-79_03,Gemini-1.5-Pro,CWE-79,XSS,3,0.816,1,2,2,0.93,0.812,0.822
+gemini_1.5_pro_cwe-79_04,Gemini-1.5-Pro,CWE-79,XSS,4,0.738,1,1,2,0.954,0.731,0.733
+gemini_1.5_pro_cwe-22_01,Gemini-1.5-Pro,CWE-22,Path Traversal,1,0.909,1,2,3,0.969,0.922,0.897
+gemini_1.5_pro_cwe-22_02,Gemini-1.5-Pro,CWE-22,Path Traversal,2,0.698,1,1,2,0.792,0.694,0.701
+gemini_1.5_pro_cwe-22_03,Gemini-1.5-Pro,CWE-22,Path Traversal,3,0.708,1,2,1,0.833,0.714,0.717
+gemini_1.5_pro_cwe-22_04,Gemini-1.5-Pro,CWE-22,Path Traversal,4,0.769,1,2,3,0.411,0.765,0.772
+gemini_1.5_pro_cwe-918_01,Gemini-1.5-Pro,CWE-918,SSRF,1,0.829,1,2,2,0.983,0.836,0.837
+gemini_1.5_pro_cwe-918_02,Gemini-1.5-Pro,CWE-918,SSRF,2,0.785,1,2,2,0.806,0.78,0.783
+gemini_1.5_pro_cwe-918_03,Gemini-1.5-Pro,CWE-918,SSRF,3,0.826,1,2,2,0.971,0.823,0.822
+gemini_1.5_pro_cwe-918_04,Gemini-1.5-Pro,CWE-918,SSRF,4,0.816,1,1,3,0.932,0.818,0.807
+gemini_1.5_pro_cwe-611_01,Gemini-1.5-Pro,CWE-611,XXE,1,0.736,1,0,3,0.944,0.734,0.738
+gemini_1.5_pro_cwe-611_02,Gemini-1.5-Pro,CWE-611,XXE,2,0.684,1,2,1,0.738,0.669,0.683
+gemini_1.5_pro_cwe-611_03,Gemini-1.5-Pro,CWE-611,XXE,3,0.811,1,2,2,0.911,0.826,0.812
+gemini_1.5_pro_cwe-611_04,Gemini-1.5-Pro,CWE-611,XXE,4,0.71,1,2,1,0.842,0.72,0.704
+gemini_1.5_pro_cwe-502_01,Gemini-1.5-Pro,CWE-502,Deserialization,1,0.886,1,2,3,0.879,0.885,0.885
+gemini_1.5_pro_cwe-502_02,Gemini-1.5-Pro,CWE-502,Deserialization,2,0.83,1,2,2,0.986,0.827,0.844
+gemini_1.5_pro_cwe-502_03,Gemini-1.5-Pro,CWE-502,Deserialization,3,0.891,1,3,2,0.898,0.881,0.877
+gemini_1.5_pro_cwe-502_04,Gemini-1.5-Pro,CWE-502,Deserialization,4,0.87,1,3,2,0.814,0.869,0.88
+gemini_1.5_pro_cwe-94_01,Gemini-1.5-Pro,CWE-94,Code Injection,1,0.643,1,1,1,0.904,0.643,0.634
+gemini_1.5_pro_cwe-94_02,Gemini-1.5-Pro,CWE-94,Code Injection,2,0.729,1,1,2,0.917,0.729,0.732
+gemini_1.5_pro_cwe-94_03,Gemini-1.5-Pro,CWE-94,Code Injection,3,0.749,1,2,2,0.665,0.75,0.751
+gemini_1.5_pro_cwe-94_04,Gemini-1.5-Pro,CWE-94,Code Injection,4,0.816,1,2,2,0.933,0.821,0.8

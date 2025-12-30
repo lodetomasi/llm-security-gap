@@ -1,0 +1,27 @@
+# Python dependencies for replication package
+# Install: pip install -r requirements.txt
+
+# Data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Statistical analysis
+scipy>=1.10.0
+statsmodels>=0.14.0
+pingouin>=0.5.3
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine learning utilities
+scikit-learn>=1.3.0
+
+# Bayesian analysis
+pymc>=5.0.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# JSON schema validation
+jsonschema>=4.17.0
